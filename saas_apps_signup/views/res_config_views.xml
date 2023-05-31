@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.saas.apps.signup</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="95"/>
+        <field name="inherit_id" ref="saas.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='saas']" position="inside">
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box" id="database_limit_size_default_settings">
+                            <div class="o_setting_right_pane">
+                                <label for="database_limit_size_default"/>
+                                <br/>
+                                <field name="database_limit_size_default"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="database_expiration_warning_delay_settings">
+                            <div class="o_setting_right_pane">
+                                <label for="database_expiration_warning_delay"/>
+                                <br/>
+                                <field name="database_expiration_warning_delay"/>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" id="number_of_days_for_trial_setings">
+                            <div class="o_setting_right_pane">
+                                <label for="number_of_days_for_trial"/>
+                                <br/>
+                                <field name="number_of_days_for_trial"/>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
